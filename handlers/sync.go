@@ -88,7 +88,7 @@ func (h *SyncHandler) Pull(c *gin.Context) {
     }
     defer rows.Close()
 
-    var mutations := []models.MutationLog{}
+    mutations := []models.MutationLog{}
     for rows.Next() {
         var m models.MutationLog
         var payloadJSON []byte
