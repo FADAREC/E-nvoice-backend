@@ -88,7 +88,8 @@ func (h *SyncHandler) Pull(c *gin.Context) {
     }
     defer rows.Close()
 
-    mutations := []models.MutationLog{}
+    mutations := []models.MutationLog{} 
+    
     for rows.Next() {
         var m models.MutationLog
         var payloadJSON []byte
@@ -101,7 +102,8 @@ func (h *SyncHandler) Pull(c *gin.Context) {
             continue
         }
 
-        json.Unmarshal(payloadJSON, &m.Payload)
+        _ = json.Unmarshal(payloadJSON, &m.Payload)
+        
         mutations = append(mutations, m)
     }
 
