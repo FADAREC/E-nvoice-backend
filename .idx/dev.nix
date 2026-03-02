@@ -5,6 +5,7 @@
   channel = "stable-23.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.postgresql
     pkgs.go
     pkgs.nodejs_20
     pkgs.nodePackages.nodemon

@@ -26,8 +26,31 @@ go.work.sum
 
 # env file
 .env
+.idx/
 
 # Editor/IDE
 # .idea/
 # .vscode/
 .env
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environment
+.env
+*.env.local
+
+# Go
+/vendor/
+go.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
